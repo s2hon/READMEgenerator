@@ -2,6 +2,7 @@ const CheckboxPrompt = require("inquirer/lib/prompts/checkbox");
 
 // array of questions for user
 const techOptions = [];
+const techChoices  [];
 const questions = [
     {name: folder,
     type: input,
@@ -14,7 +15,7 @@ const questions = [
     {name: techUsed,
     type: CheckboxPrompt,
     message: "what is the title of your project?",
-    
+    choices: 
     },
     {name: missedTech,
     type: input,
