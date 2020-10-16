@@ -137,13 +137,13 @@ const userQues = [
     },
     {name: "license",
     type: "checkbox",
-    message: "please choose at least one license name (required)",
+    message: "please choose one license name (required)",
     choices: licenseChoice,
     validate: answer => {
-        if (answer.length !== 0) {
+        if (answer.length > 1 && answer.length!==0) {
             return true;}
         else {
-            console.log("please enter at least one license");
+            console.log("please choose just one license");
             return false;}
         }
     },
@@ -183,6 +183,10 @@ const userQues = [
             console.log("please type in your name");
             return false;}
         }
+    },
+    {name: "msg",
+    type:"input",
+    message:"Any special message? (press enter to skip)"
     }
 ]
 

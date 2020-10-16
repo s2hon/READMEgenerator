@@ -1,5 +1,5 @@
-const questions = require('./question');
-const generatefile = require('./generatefile');
+const questions = require('./util/question');
+const generatefile = require('./util/generatefile');
 
 const inquirer = require('inquirer');
 const fs = require('fs');
