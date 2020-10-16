@@ -140,11 +140,11 @@ const userQues = [
     message: "please choose one license name (required)",
     choices: licenseChoice,
     validate: answer => {
-        if (answer.length > 1 && answer.length!==0) {
-            return true;}
+        if (answer.length !== 1) {
+        console.log('You must to select only one option');
+        return false;} 
         else {
-            console.log("please choose just one license");
-            return false;}
+        return true}
         }
     },
     {name: "deployed",
@@ -197,9 +197,9 @@ const userQues = [
     // message: "Project maintained (required)",
     // choices:maintainedChoice,
     // validate: answer => {
-    //     if (answer.length !== 1) {
-    //         console.log('You must to select only one option');
-    //         return false
-    //     } else {
-    //         return true
-    //     }
+        // if (answer.length !== 1) {
+        //     console.log('You must to select only one option');
+        //     return false
+        // } else {
+        //     return true
+        // }
