@@ -1,40 +1,31 @@
-const CheckboxPrompt = require("inquirer/lib/prompts/checkbox");
+const questions = require('./question');
+const generatefile = require('./generatefile');
 
-// array of questions for user
-const techOptions = [];
-const techChoices  [];
-const questions = [
-    {name: folder,
-    type: input,
-    message: "what folder will this README.md live in?"
-    },
-    {name: title,
-    type: input,
-    message: "what is the title of your project?",
-    },
-    {name: techUsed,
-    type: CheckboxPrompt,
-    message: "what is the title of your project?",
-    choices: 
-    },
-    {name: missedTech,
-    type: input,
-    message: "type in any other technology you used that wasn't listed in the prompt before. separate by ','"
-    }
-    {name: title
-    type: input,
-        message: "what is the title of your project?",
-        },
-];
+const inquirer = require('inquirer');
+const fs = require('fs');
+const util = require('util');
 
-// function to write README file
-function writeToFile(fileName, data) {
+const writeFileAsync =  util.promisify(fs.writeFile);
+
+function promptUser() {
+    return inquirer.prompt(questions)
 }
 
-// function to initialize program
-function init() {
+//function to initialize program
+async function init() {
+    console.log ('Thank you for using my README generator!')
+    try {
+        const response = await promptUser();
+        const mdFile = generatefile(response);
 
+        await writeFileAsync('readme-template.md', mdFile);
+    
+        console.log("Successful! README.md created");
+      } catch(err) {
+        console.log(err);
+      }
 }
 
-// function call to initialize program
+//function call to initialize program
 init();
+ 
