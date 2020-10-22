@@ -70,7 +70,7 @@ ${response.comment ? `This project exists thanks to all the people who contribut
 ${response.contributor}
 
 ## Questions
-Follow me on GitHub: <a href="https://github.com/${response.github}" target="_blank">![GitHub followers](https://img.shields.io/github/followers/${response.github}?label=click%20to%20connect&style=social)</a></br>
+Follow me on GitHub: <a href="https://github.com/${response.github}" target="_blank">![GitHub followers](https://img.shields.io/github/followers/${response.github}?label=${response.github}&style=social)</a></br>
 Ask me anything: ${response.email} <a href="https://www.gmail.com" target="_blank">![open Gmail](https://img.shields.io/badge/open-Gmail-red?style=for-the-badge)</a> 
 
 ## License
