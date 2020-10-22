@@ -2,7 +2,7 @@
 # README.md Generator ![maintained](https://img.shields.io/maintenance/true/2020) ![license](https://img.shields.io/badge/license-MIT-blue)
 
 ### Description
-    A command-line application that dynamically generates a professional README.md from a user's input
+A command-line application that dynamically generates a professional README.md from a user's input
 
 ## Table of contents
 * [Description](#Description)
@@ -27,7 +27,8 @@
 Easy-to-use
 
 ## Installation
-npm install
+Clone the repository to your local development environment.
+    npm install
 
 ## Usage
 By running node main.js, the application uses the inquirer package to prompt you in the command line with a series of questions about your project.
