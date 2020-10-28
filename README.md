@@ -28,6 +28,7 @@ Easy-to-use
 
 ## Installation
 Clone the repository to your local development environment.
+
     npm install
 
 ## Usage
